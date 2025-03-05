@@ -10,29 +10,27 @@ can draw a square, pentagon, and hexagon with a single function
 import turtle                           # Tell Python we want to work with the turtle
 turtle.setup (width=600, height=600)    # Set the size of the window
 
-tina = turtle.Turtle()                  # Create a turtle named tina
+tina = turtle.Turtle()
 
-tina.shape('turtle')                    # Set the shape of the turtle to a turtle
-tina.speed(2)                           # Make the turtle move as fast, but not too fast. 
+tina.shape('turtle')
+tina.speed(2)
 
 def draw_polygon(sides):
 
-    angle = ... # Calculate angle from number of sides
+    angle = 360/sides
     
-    for i in range(...):                 # Loop through the number of sides
-        ...                              # Move tina forward by the forward distance
-        ...                              # Turn tina left by the left turn
+    tina.penup()
+    tina.goto(x=0, y=100)
+    tina.pendown()
 
 
-draw_polygon(...)                        # Draw a square
+    for i in range(sides):
+        tina.forward(100)
+        tina.left(angle)
 
-...                                      # Move tina to another spot on the screen
 
-draw_polygon(...)                        # Draw a pentagon
 
-...                                      # Move tina to another spot on the screen
-
-draw_polygon(...)                        # Draw a hexagon
-
+for i in range(12, 3, -1):
+    draw_polygon(i)
 
 turtle.exitonclick()                     # Close the window when we click on it
