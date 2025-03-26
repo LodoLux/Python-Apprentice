@@ -18,3 +18,19 @@ screen.bgcolor('white')
 t = turtle.Turtle()
 
 ... # Your Code Here
+
+def set_turtle_image(leaguebot, "leaguebot.gif")
+    from pathlib import Path
+    image_dir = path(leaguebot.gif).parent / "leaguebot.gif"
+    image_path = str(image_dir / "leaguebot.gif")
+
+    screen = turtle.getscreen()
+    screen.addshape(image_path)
+    turtle.shape(image_path)
+
+
+t.turtlesize(10, 10)
+
+
+
+
