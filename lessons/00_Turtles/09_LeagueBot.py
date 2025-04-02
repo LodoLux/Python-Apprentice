@@ -19,18 +19,27 @@ t = turtle.Turtle()
 
 ... # Your Code Here
 
-def set_turtle_image(leaguebot, "leaguebot.gif")
+def set_turtle_image(turtle, image_name):
     from pathlib import Path
-    image_dir = path(leaguebot.gif).parent / "leaguebot.gif"
-    image_path = str(image_dir / "leaguebot.gif")
+    image_dir = Path(__file__).parent / "images"
+    image_path = str(image_dir / image_name)
 
     screen = turtle.getscreen()
     screen.addshape(image_path)
     turtle.shape(image_path)
 
 
-t.turtlesize(10, 10)
+
+sides = 5
+distance = 10
+angle = 360/sides
+set_turtle_image(t,"leaguebot_bolt.gif")
+t.pencolor('green')
+t.turtlesize(.1, .1)
+
+for i in range(sides):
+    t.forward(distance)
+    t.left(angle)
 
 
-
-
+turtle.exitonclick()
