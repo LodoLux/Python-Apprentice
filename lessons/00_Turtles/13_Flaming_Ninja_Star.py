@@ -36,7 +36,7 @@ t.speed(0)
 for i in range(25):
     t.pencolor(getRandomColor())
 
-    t.fillcolor(getRandomColor()) 
+    t.fillcolor(getNextColor(i))
    
     t.begin_fill()
 

@@ -30,7 +30,7 @@ myTurtle.speed(0)
 myTurtle.color("green")
 
 # Use a loop to repeat the code below 50 times
-for i in range(50):
+for i in range(45):
 
     # Set the turtle color to a random color
     myTurtle.pencolor(getRandomColor())
