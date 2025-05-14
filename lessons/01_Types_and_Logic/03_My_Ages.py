@@ -43,6 +43,37 @@ window.withdraw() # Hide the window; we just want to see pop ups
 
 # Show the message to the user
 
+#age = input("Enter your age.")
+#age = int(input("Enter your age."))
+
+try:
+    age = int(input("Enter your age: "))
+    if age > 99:
+        print("You're dead!")
+
+    elif age > 64:
+        print("You are a senior.")
+
+    elif age > 19:
+        print("You are an adult.")
+
+    elif age > 12:
+        print("You are a teenager.")
+
+    elif age > 5:
+        print("You are a kid.")
+
+    elif age > 2:
+        print("You are a toddler.")
+
+    elif age > -1:
+        print("You are a baby.")
+except ValueError:
+    print("Invalied input. Please enter a valid age")
+else:
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+
 
 
 window.mainloop()  # Keeps the window open
