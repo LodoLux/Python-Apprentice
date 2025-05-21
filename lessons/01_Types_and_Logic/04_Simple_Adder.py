@@ -19,7 +19,15 @@ at the comments and the code snippets in the previous lessons, like
 
 # Ask the user for the second number
 
-# Display the sum of the two numbers 
+# Display the sum of the two numbers #
 
-# Keep the window open
 
+
+from tkinter import messagebox, simpledialog, Tk
+
+window = Tk()
+window.withdraw()
+
+
+
+window.mainloop()
